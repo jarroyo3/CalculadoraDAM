@@ -201,6 +201,10 @@ namespace InterfazCalculadora
         {
             almacenaOperando();
             displayLabel.Text = calculadora.operar().ToString();
+            if (displayLabel.Text.Contains(","))
+            {
+                this.esDisplayDecimal = true;
+            }
         }
 
         private void almacenaOperando()
