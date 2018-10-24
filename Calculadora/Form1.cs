@@ -328,6 +328,11 @@ namespace InterfazCalculadora
         private void toggleNegativo()
         {
             Console.WriteLine("ToggleNegativo-->" + displayLabel.Text);
+            if (displayLabel.Text.Equals(DIGITO_CERO))
+            {
+                return;
+            }
+
             if (!esDigitoNegativo())
             {
                 displayLabel.Text = "-" + displayLabel.Text;
